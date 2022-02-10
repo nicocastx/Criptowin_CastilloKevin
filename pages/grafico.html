@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/favicon.png" />
+    <link rel="stylesheet" href="../css/general.css">
+
+    <!-- fuente roboto sans serif -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <title>Criptowin</title>
+</head>
+
+<body>
+    <header>
+        <!-- logo -->
+        <div class="logoContainer">
+            <a href="../index.html"><img src="../img/logo.png" alt="logo criptowin" height="50px"></a>
+            <h3 class="logoTitle">CriptoWin</h3>
+        </div>
+        <!-- menu navegacion -->
+        <nav>
+            <ul>
+                <li><a href="../index.html" class="menuLink">Inicio</a></li>
+                <li><a href="nosotros.html" class="menuLink">Nosotros</a></li>
+                <li><a href="servicios.html" class="menuLink">Servicios</a></li>
+                <li><a href="grafico.html" class="menuLink">Grafico</a></li>
+                <li><a href="contacto.html" class="menuLink">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="mainContentContainer">
+            <div class="mainTitleContainer">
+                <h1 class="mainTitle">Grafico Tradingview</h1>
+                <h3 class="mainSubtitle">Siga aqui el mercado que desee</h3>
+            </div>
+            <!-- TradingView Widget BEGIN -->
+            <div class="tradingview-widget-container">
+                <div id="tradingview_54d4f"></div>
+                <div class="tradingview-widget-copyright"><a
+                        href="https://es.tradingview.com/symbols/BTCUSDT/?exchange=BINANCE" rel="noopener"
+                        target="_blank"><span class="blue-text">BTCUSDT Gráfico</span></a> por TradingView</div>
+                <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                <script type="text/javascript">
+                    new TradingView.widget({
+                        "width": 980,
+                        "height": 610,
+                        "symbol": "BINANCE:BTCUSDT",
+                        "interval": "D",
+                        "timezone": "Etc/UTC",
+                        "theme": "dark",
+                        "style": "1",
+                        "locale": "es",
+                        "toolbar_bg": "#f1f3f6",
+                        "enable_publishing": false,
+                        "allow_symbol_change": true,
+                        "container_id": "tradingview_54d4f"
+                    });
+                </script>
+            </div>
+            <!-- TradingView Widget END -->
+        </section>
+    </main>
+    <footer>
+        <div class="footerText">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="socialMediaContainer">
+            <a href=""><img src="../img/facebook.png" alt="facebook icon" height="40px"></a>
+            <a href=""><img src="../img/instagram.png" alt="instagram icon" height="40px"></a>
+            <a href=""><img src="../img/twitter.png" alt="twitter icon" height="40px"></a>
+            <!-- solo funcionara este -->
+            <a href="https://github.com/nicocastx" target="_blank"><img src="../img/github_icon.png" alt="github icon"
+                    height="40px"></a>
+        </div>
+    </footer>
+</body>
+
+</html>

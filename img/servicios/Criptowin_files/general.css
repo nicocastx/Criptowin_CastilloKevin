@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(27, 29, 30);
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Estilos para el header */
+header{
+    height: 60px;
+    box-sizing: border-box;
+    border: black 1px solid;
+    width: 100%;
+    border-end-start-radius: 20px;
+    border-end-end-radius: 20px;
+    background: linear-gradient(to right, #f7971e, #ffd200);
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top:0px
+}
+
+.logoContainer{
+    width: 200px;
+    height: 100%;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+nav{
+    margin-left: auto;
+    width: 500px;
+    margin-right: 20px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li{
+    display: inline-block;
+    margin: 10px;
+}
+
+nav ul li .menuLink{
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+}
+
+nav ul li .menuLink:hover{
+    color:white;
+}
+
+.logoTitle{
+    font-size: 30px;
+}
+
+/* Estilos para el main  de index*/
+
+.mainContentContainer{
+    height: 1000px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    color: white;
+}
+
+
+.mainTitleContainer{
+    height: 120px;
+    width: 80%;
+    text-align: center;
+    vertical-align: middle;
+    background: linear-gradient(to right, #f7971e, #ffd200);
+    box-shadow: 5px 5px 15px 5px #000000;
+}
+
+.mainTitle{
+    font-size: 60px;
+    color: black;
+}
+
+.mainSubtitle, .publication h3{
+    font-size: 30px;
+    color: black;
+}
+
+.publication p{
+    font-size: 20px;
+}
+
+.publication{
+    height: 500px;
+    width: 400px;
+    background-color:white;
+    text-align: center;
+    color: black;
+}
+
+/* Estilos para el footer */
+
+footer{
+    height: 60px;
+    width: 100%;
+    background: linear-gradient(to right, #f7971e, #ffd200);
+    display: flex;
+    align-items: center;
+    position: static;
+    bottom: 0px;
+}
+
+.socialMediaContainer{
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.footerText{
+    margin-left: 20px;
+}
+
+.socialMediaContainer a{
+    margin-left: 10px;
+}
+
+a img:hover{
+    filter: invert(100%);
+}
+
+/* Estilos para servicios */
+
+.serviceContainer{
+    height: 500px;
+    width: 400px;
+    background-color:white;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    color: black;
+}
+
+/* estilos para grafico */
+
+.tradingview-widget-container{
+    border: #ffd200 solid 5px;
+    margin: 10px;
+    padding: 20px;
+}
+
+/* Estilos para nosotros  */
