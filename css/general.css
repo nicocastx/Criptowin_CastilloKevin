@@ -1,3 +1,5 @@
+/* Estilos generales */
+
 * {
     margin: 0;
     padding: 0;
@@ -8,12 +10,68 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+img{
+    width: 100%;
+}
+
+h3{
+    font-size: 25px;
+    color: black;
+    margin-bottom: 10px;
+}
+
+
+/* Utilities */
+
+.grid{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.gridi1{
+    grid-area: pub1;
+}
+
+.gridi2{
+    grid-area: pub2;
+}
+
+.gridi3{
+    grid-area: pub3;
+}
+
+.gridAboutUs{
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px 600px;
+    grid-template-areas: "titulo"
+                "pub1";
+}
+
+.gridIndex{
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 200px 600px;
+    grid-template-areas: "titulo titulo titulo"
+    "pub1 pub2 pub3";
+}
+
+.gridServices{
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 200px 600px 400px;
+    grid-template-areas: "titulo titulo titulo"
+    "pub1 pub2 pub3"
+    "services services services";
+}
+
 /* Estilos para el header */
+
 header {
+    max-width: 1800px;
+    margin: 0 auto;
     height: 60px;
     box-sizing: border-box;
     border: black 1px solid;
-    width: 100%;
     border-end-start-radius: 20px;
     border-end-end-radius: 20px;
     background: linear-gradient(to right, #f7971e, #ffd200);
@@ -52,6 +110,7 @@ nav ul li .menuLink {
 
 nav ul li .menuLink:hover {
     color: white;
+    border-bottom: 2px solid white;
 }
 
 .logoTitle {
@@ -60,21 +119,17 @@ nav ul li .menuLink:hover {
 
 /* Estilos para el main  de index*/
 
-.mainContentContainer {
-    height: 900px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
+.mainContentContainer{
+    max-width: 1800px;
+    height: 1200px;
     color: white;
+    margin: 0 auto;
 }
-
 
 .mainTitleContainer {
     height: 120px;
     width: 100%;
+    grid-area: titulo;
     text-align: center;
     vertical-align: middle;
     background: linear-gradient(to right, #f7971e, #ffd200);
@@ -83,12 +138,6 @@ nav ul li .menuLink:hover {
 
 .mainTitle {
     font-size: 60px;
-    color: black;
-}
-
-.mainSubtitle,
-.publication h3 {
-    font-size: 30px;
     color: black;
 }
 
@@ -102,31 +151,34 @@ nav ul li .menuLink:hover {
     background-color: white;
     text-align: center;
     color: black;
+    margin: 0 auto;
 }
 
-/* Estilos para el footer */
 
-footer {
-    height: 60px;
+
+/* Nuevo Footer */
+footer{
+    display: flex;
     width: 100%;
-    background: linear-gradient(to right, #f7971e, #ffd200);
+    height: 60px;
+    background-color: #f7971e;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.socialMediaContainer{
+    display: flex;
+    width: 200px;
+    height: 40px;
+    justify-content: space-evenly;
+}
+
+.footerText{
+    font-size: 18px;
+    margin-left: 20px;
+    font-weight: 500;
     display: flex;
     align-items: center;
-    position: static;
-    bottom: 0px;
-}
-
-.socialMediaContainer {
-    margin-left: auto;
-    margin-right: 20px;
-}
-
-.footerText {
-    margin-left: 20px;
-}
-
-.socialMediaContainer a {
-    margin-left: 10px;
 }
 
 a img:hover {
@@ -162,12 +214,12 @@ a img:hover {
 
 .presentation h2{
     font-size: 40px;
-    margin-bottom: 20px;
-    margin-top: 8%;
+    margin-top: auto;
 }
 
 .presentation p{
     font-size: 20px;
+    margin: auto;
 }
 
 /* Estilos para servicios */
@@ -178,10 +230,9 @@ a img:hover {
     background-color: white;
     text-align: center;
     margin-top: 30px;
-    margin-bottom: 30px;
     color: black;
     position: relative;
-    margin-bottom: 20px;
+    margin: 0 auto;
 }
 
 .serviceContainer button{
@@ -199,17 +250,25 @@ a img:hover {
     margin-left: 30px;
 }
 
-.serviceContainer h3, .companiesContainer h3{
-    font-size: 30px;
-    margin-bottom: 10px;
-}
 
 .serviceContainer p{
     font-size: 18px;
 }
 
 .companiesContainer{
-    width: 100%;
+    max-width: 1800px;
+    height: 250px;
+    background-color: #f7971e;
+    grid-area: services;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .companiesContainer{
+    max-width: 1800px;
+    margin: 0 auto;
     height: 250px;
     background-color: #f7971e;
     margin-bottom: 40px;
@@ -217,13 +276,20 @@ a img:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+} */
+
+.galleryCell{
+    width: 100px;
+    height: auto;
 }
 
 .services{
-    height: 150px;
+    height: 128px;
     margin-top: 30px;
     width: 80%;
     align-items: center;
+    display: flex;
+    
 }
 .services img{
     margin-left: 80px;
