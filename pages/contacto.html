@@ -42,19 +42,18 @@
             </div>
             <div class="contactContainer gridi1">
                 <form action="#">
-                    <fieldset>
-                        <legend>Porfavor, registra aqui tus datos</legend>
+                    <h3>Porfavor, registra aqui tus datos</h3>
                         <div class="namesContainer">
                             <label for="nombre-apellido">Ingresa tu nombre y apellido</label>
-                            <input type="text" name="nombre-apellido" placeholder="Nombre y Apellido...">
+                            <input type="text" name="nombre-apellido" placeholder="Nombre y Apellido..." required>
                         </div>
                         <div class="sexContainer">
                             <p>Sexo:</p>
-                            <input type="radio" name="sexo" id="hombre" value="Hombre">
+                            <input type="radio" name="sexo" id="hombre" value="Hombre" required>
                             <label for="hombre">Hombre</label><br>
-                            <input type="radio" name="sexo" id="mujer" value="Mujer">
+                            <input type="radio" name="sexo" id="mujer" value="Mujer" required>
                             <label for="mujer">Mujer</label><br>
-                            <input type="radio" name="sexo" id="otro" value="Otro">
+                            <input type="radio" name="sexo" id="otro" value="Otro" required>
                             <label for="otro">Otro</label>
                         </div>
                         <div class="emailContainer">
@@ -66,7 +65,6 @@
                             <textarea name="comentario" id="comentario" cols="30" rows="10" placeholder="Tus comentarios aqui..."></textarea>
                         </div>
                         <input class="btn" type="submit" value="Enviar">
-                    </fieldset>
                 </form>
             </div>
         </section>

@@ -23,21 +23,26 @@ p {
     font-size: 18px;
 }
 
-.btn {
+.btn{
     width: 200px;
-    background: linear-gradient(to right, #f46b45, #eea849);
+    background-color: rgb(0, 0, 0);
     border: none;
-    color: rgb(27, 29, 30);
+    color: rgb(206, 215, 220);
     padding: 15px 32px;
     text-decoration: none;
     cursor: pointer;
     font-size: 16px;
-    border-radius: 20px;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); ;
     font-weight: 500;
+    transition: all 0.3s;
 }
 
 .btn:hover{
-    transform: scale(0.9);
+    box-shadow: 0px 15px 20px rgb(40, 39, 39);
+    transform: translateY(-7px);
+    background-color: #fff;
+    color: #000;
     }
 
 /* Utilities */
@@ -123,6 +128,10 @@ header {
     align-items: center;
 }
 
+.logoContainer img{
+    width: 50px;
+}
+
 nav {
     margin-left: auto;
     width: 500px;
@@ -166,7 +175,8 @@ nav ul li .menuLink:hover {
     text-align: center;
     vertical-align: middle;
     background: linear-gradient(to right, #f7971e, #ffd200);
-    box-shadow: 5px 5px 15px 5px #000000;
+    border: 2px solid #ffd200;
+    box-shadow: 0px 0px 8px #f46b45;
 }
 
 .mainTitle {
@@ -180,10 +190,13 @@ nav ul li .menuLink:hover {
 
 .publication {
     height: 500px;
-    width: 400px;
+    max-width: 400px;
+    min-width: 300px;
     text-align: center;
     color: black;
     background: linear-gradient(to right, #ece9e6, #ffffff);
+    border: 1px solid #ffffff;
+    box-shadow: 0px 0px 5px #ece9e6;
 }
 
 
@@ -197,8 +210,6 @@ footer {
     justify-content: space-between;
     align-content: center;
     align-items: center;
-    position: relative;
-    bottom: 0;
     margin: 0 auto;
 }
 
@@ -210,9 +221,7 @@ footer {
 }
 
 .footerText {
-    font-size: 18px;
     margin-left: 20px;
-    font-weight: 500;
     display: flex;
     align-items: center;
 }
@@ -231,6 +240,8 @@ a img:hover {
     width: 80%;
     height: 80%;
     align-items: center;
+    border: 1px solid #ffd200;
+    box-shadow: 0px 0px 5px #ffd200;
 }
 
 .videoContainer {
@@ -291,11 +302,13 @@ a img:hover {
 .serviceContainer {
     height: 600px;
     width: 400px;
-    background-color: white;
+    background: linear-gradient(to right, #ece9e6, #ffffff);
     text-align: center;
     color: black;
     position: relative;
     margin: 0 auto;
+    border: 1px solid #ffffff;
+    box-shadow: 0px 0px 5px #ece9e6;
 }
 
 .serviceContainer button {
@@ -347,45 +360,126 @@ a img:hover {
 /* Estilos para Contacto */
 
 .contactContainer {
-    width: 100%;
+    background-color: #ece9e6;
+    width: 80%;
+    height: 80%;
+    padding: 20px;
+    font-size: 20px;
+    color: #000;
+    border: #000 1px solid;
+    box-shadow: 0px 0px 10px #000;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: auto;
 }
 
-.contactContainer fieldset {
-    position: relative;
+.contactContainer .namesContainer, .contactContainer .emailContainer{
+    width: 40%;
 }
 
 .contactContainer input[type=submit] {
     width: 150px;
     position: absolute;
-    bottom: 10px;
-    right: 15px;
-}
-
-.contactContainer .commentaryContainer {
-    position: absolute;
-    top: 15px;
+    bottom: 15px;
     right: 15px;
 }
 
 .contactContainer div {
-    position: absolute;
+    margin: 20px 0;
+}
+
+div input[type=text], div input[type=email]{
+    background: transparent;
+    height: 35px;
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid #000;
+    font-size: 16px;
+}
+
+div input:focus{
+    outline: none;
+}
+
+div input[type=radio]{
+    height: 20px;
+    width: 20px;
+    margin: 5px 0;
+}
+
+.contactContainer .commentaryContainer{
     display: flex;
     flex-direction: column;
+    width: 60%;
 }
 
-.contactContainer .namesContainer {
-    top: 15px;
-    left: 15px;
-}
-
-.contactContainer .sexContainer {
-    top: 100px;
-    left: 15px;
-}
-
-.contactContainer .emailContainer {
-    bottom: 60px;
-    left: 15px;
+.commentaryContainer textarea{
+    background: transparent;
+    margin-top: 10px;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    padding: 5px;
 }
 
 /* Media queries */
+
+@media screen and (max-width: 768px){
+    /* Utilities mobile */
+    h3 {
+        font-size: 20px;
+        color: black;
+    }
+    
+    p {
+        font-size: 14px;
+    }
+
+    .gridIndex{
+        grid-template-columns: 1fr;
+        grid-template-rows:  200px 1fr 1fr 1fr ;
+        grid-template-areas:"titulo"
+                            "pub1"
+                            "pub2"
+                            "pub3";
+    }
+
+    /* Queries para el header */
+    header{
+        max-width: 768px;
+        height: 150px;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .logoContainer{
+        height: 30%;
+    }
+
+    /* Queries para el index */
+    .mainContentContainer{
+        height: 1800px;
+        max-width: 768px;
+    }
+
+
+    nav ul li .menuLink {
+        font-size: 12px;
+
+    }
+
+
+    .publication{
+        width: 90%;
+    }
+
+    .footerText{
+        width: 50%;
+        margin-left: 5px;
+    }
+
+    .footerText p{
+        font-size: 10px;
+    }
+
+}
