@@ -3,6 +3,11 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
 }
 
 body {
@@ -15,12 +20,12 @@ img {
 }
 
 h3 {
-    font-size: 30px;
+    font-size: 3rem;
     color: black;
 }
 
 p {
-    font-size: 18px;
+    font-size: 1.6rem;
 }
 
 .btn{
@@ -129,27 +134,35 @@ header {
 }
 
 .logoContainer img{
-    width: 50px;
+    width: 5rem;
 }
 
 nav {
-    margin-left: auto;
-    width: 500px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
     margin-right: 20px;
 }
 
 ul {
     list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border: 1px solid #000;
+    padding: 0.5rem;
+    box-shadow: 0px 0px 5px #000;
 }
 
 ul li {
     display: inline-block;
-    margin: 10px;
+    margin-left: 2%;
+    width: 8rem;
 }
 
 nav ul li .menuLink {
     text-decoration: none;
-    font-size: 20px;
+    font-size: 2rem;
     color: black;
     transition: all 0.5s;
 }
@@ -177,15 +190,18 @@ nav ul li .menuLink:hover {
     background: linear-gradient(to right, #f7971e, #ffd200);
     border: 2px solid #ffd200;
     box-shadow: 0px 0px 8px #f46b45;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .mainTitle {
-    font-size: 60px;
+    font-size: 4rem;
     color: black;
 }
 
 .publication p {
-    font-size: 20px;
+    font-size: 2rem;
 }
 
 .publication {
@@ -221,6 +237,7 @@ footer {
 }
 
 .footerText {
+    width: 40%;
     margin-left: 20px;
     display: flex;
     align-items: center;
@@ -284,7 +301,7 @@ a img:hover {
 }
 
 .presentation h2 {
-    font-size: 40px;
+    font-size: 4rem;
 }
 
 .imgContainer {
@@ -364,7 +381,7 @@ a img:hover {
     width: 80%;
     height: 80%;
     padding: 20px;
-    font-size: 20px;
+    font-size: 2rem;
     color: #000;
     border: #000 1px solid;
     box-shadow: 0px 0px 10px #000;
@@ -395,7 +412,7 @@ div input[type=text], div input[type=email]{
     width: 100%;
     border: 0;
     border-bottom: 1px solid #000;
-    font-size: 16px;
+    font-size: 1.6rem;
 }
 
 div input:focus{
@@ -417,69 +434,108 @@ div input[type=radio]{
 .commentaryContainer textarea{
     background: transparent;
     margin-top: 10px;
-    font-size: 14px;
+    font-size: 1.6rem;
     font-family: 'Roboto', sans-serif;
     padding: 5px;
 }
 
 /* Media queries */
 
-@media screen and (max-width: 768px){
-    /* Utilities mobile */
+@media screen and (max-width: 1024px){
+    /* General mobile */
     h3 {
         font-size: 20px;
         color: black;
     }
-    
-    p {
-        font-size: 14px;
+
+    /* Utilities mobile */
+    .grid {
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        grid-template-columns: 1fr;
+        grid-template-rows:  200px 1fr 1fr 1fr;
+        gap: 20px;
     }
 
     .gridIndex{
-        grid-template-columns: 1fr;
-        grid-template-rows:  200px 1fr 1fr 1fr ;
         grid-template-areas:"titulo"
                             "pub1"
                             "pub2"
                             "pub3";
     }
+    
+    .gridAboutUs {
+        grid-template-rows:  200px 1.8fr 1.2fr;
+        grid-template-areas:"titulo"
+                            "pub1"
+                            "pub2";
+    }
+    
 
     /* Queries para el header */
     header{
         max-width: 768px;
-        height: 150px;
+        min-width: 320px;
+        height: 100px;
         flex-direction: column;
-        padding: 20px;
+        padding: 10px;
+        justify-content: flex-end;
     }
 
     .logoContainer{
-        height: 30%;
+        height: 100%;
+        width: 100%;
+        justify-content: center;
     }
+
+    nav{
+        margin: 0;
+        justify-content: center;
+    }
+
+    ul{
+        width: 100%;
+    }
+
+    nav ul li .menuLink {
+        font-size: 1.5rem;
+    }
+
 
     /* Queries para el index */
     .mainContentContainer{
-        height: 1800px;
+        height: 2000px;
         max-width: 768px;
     }
-
-
-    nav ul li .menuLink {
-        font-size: 12px;
-
-    }
-
 
     .publication{
         width: 90%;
     }
 
     .footerText{
-        width: 50%;
         margin-left: 5px;
     }
 
     .footerText p{
-        font-size: 10px;
+        font-size: 1.2rem;
     }
+
+/* Queries para nosotros */
+    .container{
+        flex-direction: column;
+    }
+
+    .videoContainer{
+        width: 80%;
+    }
+
+    .presentation{
+        width: 100%;
+    }
+
+.imgContainer {
+    width: 30%;
+}
 
 }
