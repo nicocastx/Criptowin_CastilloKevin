@@ -531,6 +531,9 @@ div input[type=radio] {
         font-size: 1.5rem;
     }
 
+    .socialMediaContainer img{
+        width: 40px;
+    }
 
     /* Queries para el index */
     .mainContentContainer {
