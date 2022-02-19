@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 
-html{
+html {
     font-size: 10px;
 }
 
@@ -28,7 +28,7 @@ p {
     font-size: 1.6rem;
 }
 
-.btn{
+.btn {
     width: 200px;
     background-color: rgb(0, 0, 0);
     border: none;
@@ -38,17 +38,18 @@ p {
     cursor: pointer;
     font-size: 16px;
     border-radius: 45px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); ;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    ;
     font-weight: 500;
     transition: all 0.3s;
 }
 
-.btn:hover{
+.btn:hover {
     box-shadow: 0px 15px 20px rgb(40, 39, 39);
     transform: translateY(-7px);
     background-color: #fff;
     color: #000;
-    }
+}
 
 /* Utilities */
 
@@ -74,38 +75,37 @@ p {
 }
 
 .gridIndex {
-    grid-template-areas:"titulo titulo titulo"
-                        "pub1 pub2 pub3";
+    grid-template-areas: "titulo titulo titulo"
+        "pub1 pub2 pub3";
 
 }
 
 .gridAboutUs {
     grid-template-columns: 1fr;
-    grid-template-areas:"titulo"
-                        "pub1"
-                        "pub2";
+    grid-template-areas: "titulo"
+        "pub1"
+        "pub2";
 }
 
 .gridServices {
-    grid-template-areas:"titulo titulo titulo"
-                        "pub1 pub2 pub3"
-                        "companies companies companies";
+    grid-template-areas: "titulo titulo titulo"
+        "pub1 pub2 pub3"
+        "companies companies companies";
 }
 
-.gridGraphic{
+.gridGraphic {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 4fr 1fr;
-    grid-template-areas:"titulo"
-                        "pub1"
-                        "pub2";
+    grid-template-rows: 1fr 2.5fr 2.5fr;
+    grid-template-areas: "titulo"
+        "pub1"
+        "pub2";
 }
 
-.gridContact{
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr 4fr 1fr;
-    grid-template-areas:"titulo titulo"
-                        "pub1 pub2"
-                        ;
+.gridContact {
+    grid-template-rows: 1fr 5fr 1fr;
+    grid-template-areas: "titulo titulo titulo"
+        "pub1 pub1 pub2"
+    ;
 }
 
 /* Estilos para el header */
@@ -133,7 +133,7 @@ header {
     align-items: center;
 }
 
-.logoContainer img{
+.logoContainer img {
     width: 5rem;
 }
 
@@ -274,13 +274,13 @@ a img:hover {
     position: relative;
 }
 
-.videoContainer iframe{
+.videoContainer iframe {
     width: 100%;
     height: 80%;
     border: #ece9e6 2px solid;
 }
 
-.videoContainer h3{
+.videoContainer h3 {
     border-bottom: gainsboro 2px solid;
     display: block;
     border-radius: 10px;
@@ -308,7 +308,7 @@ a img:hover {
     width: 20%;
 }
 
-.imgContainer img{
+.imgContainer img {
     border: 2px solid gold;
     overflow: hidden;
     border-radius: 20px;
@@ -318,7 +318,8 @@ a img:hover {
 
 .serviceContainer {
     height: 600px;
-    width: 400px;
+    min-width: 320px;
+    max-width: 400px;
     background: linear-gradient(to right, #ece9e6, #ffffff);
     text-align: center;
     color: black;
@@ -346,7 +347,7 @@ a img:hover {
     justify-content: space-around;
 }
 
-.titleContainer{
+.titleContainer {
     border: #000 2px solid;
     padding: 10px;
 }
@@ -359,27 +360,33 @@ a img:hover {
     display: flex;
 }
 
+.galleryCell {
+    width: 50%;
+}
 
-.companies img:hover{
+.companies img:hover {
     transform: skewY(8deg);
 }
 
 /* Estilos para grafico */
 
 .tradingview-widget-container {
-    height: 600px;
-    width: 1100px;
+    height: 90%;
+    width: 600px;
     border: #ffd200 2px solid;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding:20px;
+}
+
+.tradingview-widget-container div div {
+    height: 380px !important;
 }
 
 /* Estilos para Contacto */
 
 .contactContainer {
     background-color: #ece9e6;
-    width: 80%;
-    height: 80%;
+    width: 90%;
+    height: 700px;
     padding: 20px;
     font-size: 2rem;
     color: #000;
@@ -391,7 +398,7 @@ a img:hover {
     overflow: auto;
 }
 
-.contactContainer .namesContainer, .contactContainer .emailContainer{
+form{
     width: 40%;
 }
 
@@ -406,45 +413,43 @@ a img:hover {
     margin: 20px 0;
 }
 
-div input[type=text], div input[type=email]{
+div input[type=text],
+div input[type=email] {
     background: transparent;
     height: 35px;
     width: 100%;
     border: 0;
     border-bottom: 1px solid #000;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
 }
 
-div input:focus{
+div input:focus {
     outline: none;
 }
 
-div input[type=radio]{
-    height: 20px;
+div input[type=radio] {
+    height: 10px;
     width: 20px;
     margin: 5px 0;
 }
 
-.contactContainer .commentaryContainer{
-    display: flex;
-    flex-direction: column;
-    width: 60%;
-}
-
-.commentaryContainer textarea{
+.commentaryContainer textarea {
     background: transparent;
+    width: 100%;
+    height: 120px;
     margin-top: 10px;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     font-family: 'Roboto', sans-serif;
     padding: 5px;
 }
 
 /* Media queries */
 
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1024px) {
+
     /* General mobile */
     h3 {
-        font-size: 20px;
+        font-size: 2rem;
         color: black;
     }
 
@@ -454,27 +459,51 @@ div input[type=radio]{
         justify-items: center;
         align-items: center;
         grid-template-columns: 1fr;
-        grid-template-rows:  200px 1fr 1fr 1fr;
+        grid-template-rows: 150px 1fr 1fr 1fr;
         gap: 20px;
     }
 
-    .gridIndex{
-        grid-template-areas:"titulo"
-                            "pub1"
-                            "pub2"
-                            "pub3";
+    .gridIndex {
+        grid-template-areas: "titulo"
+            "pub1"
+            "pub2"
+            "pub3";
     }
-    
+
     .gridAboutUs {
-        grid-template-rows:  200px 1.8fr 1.2fr;
-        grid-template-areas:"titulo"
-                            "pub1"
-                            "pub2";
+        grid-template-rows: 150px 1.8fr 1.2fr;
+        grid-template-areas: "titulo"
+            "pub1"
+            "pub2";
     }
-    
+
+    /* faltan */
+    .gridServices {
+        grid-template-rows: 150px 1fr 1fr 1fr 250px;
+        grid-template-areas: "titulo"
+            "pub1"
+            "pub2"
+            "pub3"
+            "companies";
+    }
+
+    .gridGraphic {
+        grid-template-columns: 1fr;
+        grid-template-rows: 150px 2.75fr 2.75fr;
+        grid-template-areas: "titulo"
+            "pub1"
+            "pub2";
+    }
+
+    .gridContact {
+        grid-template-rows: 150px 2.75fr 2.75fr;
+        grid-template-areas: "titulo"
+            "pub1"
+        ;
+    }
 
     /* Queries para el header */
-    header{
+    header {
         max-width: 768px;
         min-width: 320px;
         height: 100px;
@@ -483,18 +512,18 @@ div input[type=radio]{
         justify-content: flex-end;
     }
 
-    .logoContainer{
+    .logoContainer {
         height: 100%;
         width: 100%;
         justify-content: center;
     }
 
-    nav{
+    nav {
         margin: 0;
         justify-content: center;
     }
 
-    ul{
+    ul {
         width: 100%;
     }
 
@@ -504,38 +533,76 @@ div input[type=radio]{
 
 
     /* Queries para el index */
-    .mainContentContainer{
-        height: 2000px;
+    .mainContentContainer {
+        height: 2300px;
         max-width: 768px;
     }
 
-    .publication{
+    .publication {
         width: 90%;
     }
 
-    .footerText{
+    .footerText {
         margin-left: 5px;
     }
 
-    .footerText p{
+    .footerText p {
         font-size: 1.2rem;
     }
 
-/* Queries para nosotros */
-    .container{
+    /* Queries para nosotros */
+    .container {
         flex-direction: column;
     }
 
-    .videoContainer{
+
+    .videoContainer {
         width: 80%;
+        height: 60%;
     }
 
-    .presentation{
+    .presentation {
         width: 100%;
     }
 
-.imgContainer {
-    width: 30%;
-}
+    .imgContainer {
+        width: 30%;
+    }
+
+    /* Queries para servicios */
+
+    .titleContainer {
+        border: none;
+    }
+
+    .companiesContainer {
+        height: 200px;
+        width: 90%;
+    }
+
+    .titleContainer {
+        font-size: 1.4rem;
+    }
+
+    /* Queries para grafico */
+
+    .tradingview-widget-container {
+        height: fit-content;
+        width: 100%;
+        border: #ffd200 2px solid;
+        padding: 10px;
+    }
+
+    .tradingview-widget-container div div {
+        height: 600px !important;
+    }
+
+    /* Queries para Contacto */
+    .contactContainer{
+        height: 90%;
+    }
+    form{
+        width: 100%;
+    }
 
 }
