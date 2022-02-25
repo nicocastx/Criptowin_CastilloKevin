@@ -213,8 +213,12 @@ nav ul li .menuLink:hover {
     background: linear-gradient(to right, #ece9e6, #ffffff);
     border: 1px solid #ffffff;
     box-shadow: 0px 0px 5px #ece9e6;
+    
 }
 
+.publication:hover{
+    transform: translateY(-15px);
+}
 
 
 /* Nuevo Footer */
@@ -335,6 +339,11 @@ a img:hover {
     right: 20px;
 }
 
+.serviceContainer:hover{
+    transform: translateY(-15px);
+}
+
+
 .companiesContainer {
     width: 60%;
     max-width: 1800px;
@@ -446,12 +455,6 @@ div input[type=radio] {
 /* Media queries */
 
 @media screen and (max-width: 1024px) {
-
-    /* General mobile */
-    h3 {
-        font-size: 2rem;
-        color: black;
-    }
 
     /* Utilities mobile */
     .grid {
