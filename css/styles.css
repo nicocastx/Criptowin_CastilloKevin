@@ -18,6 +18,81 @@ h1{
     font-weight: 700;
 }
 
+.btn {
+    width: 200px;
+    background-color: rgb(0, 0, 0);
+    border: none;
+    color: rgb(206, 215, 220);
+    padding: 15px 32px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    ;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    box-shadow: 0px 15px 20px rgb(40, 39, 39);
+    transform: translateY(-7px);
+    background-color: #fff;
+    color: #000;
+}
+
+/* Grids */
+.mygrid {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 3fr 2fr;
+    gap: 20px;
+}
+
+.gridi1 {
+    grid-area: pub1;
+}
+
+.gridi2 {
+    grid-area: pub2;
+}
+
+.gridi3 {
+    grid-area: pub3;
+}
+
+
+.gridAboutUs {
+    grid-template-columns: 1fr;
+    grid-template-areas: "titulo"
+        "pub1"
+        "pub2";
+}
+
+.gridServices {
+    grid-template-areas: "titulo titulo titulo"
+        "pub1 pub2 pub3"
+        "companies companies companies";
+}
+
+.gridGraphic {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2.5fr 2.5fr;
+    grid-template-areas: "titulo"
+        "pub1"
+        "pub2";
+}
+
+.gridContact {
+    grid-template-rows: 1fr 5fr 1fr;
+    grid-template-areas: "titulo titulo titulo"
+        "pub1 pub1 pub2"
+    ;
+}
+
+
 /* Header */
 .navbar-nav{
     margin-left: auto;
@@ -27,7 +102,8 @@ h1{
     filter: invert(100%);
 }
 
-/* Main */
+/* Main de index*/
+
 .carousel .card{
     margin: auto;
     color: black;
@@ -47,9 +123,96 @@ h1{
     justify-content: center;
 }
 
+/* Footer */
 footer {
     display: flex;
     align-content: center;
     align-items: center;
+}
+
+/* Estilos para nosotros */
+
+.mainContentContainer {
+    max-width: 1800px;
+    height: 1200px;
+    color: white;
     margin: 0 auto;
+}
+
+.mycontainer {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    border: #f7971e 2px solid;
+    width: 80%;
+    height: 80%;
+    align-items: center;
+    border: 1px solid #ffd200;
+    box-shadow: 0px 0px 5px #ffd200;
+}
+
+.Imgcontainer {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    border: #f7971e 2px solid;
+    width: 80%;
+    height: 80%;
+    align-items: center;
+    border: 1px solid #ffd200;
+    box-shadow: 0px 0px 5px #ffd200;
+}
+
+.videoContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    border: #ffd200 2px solid;
+    border-radius: 30px;
+    padding: 20px;
+    height: 90%;
+    width: 40%;
+    position: relative;
+}
+
+.videoContainer iframe {
+    width: 100%;
+    height: 80%;
+    border: #ece9e6 2px solid;
+}
+
+.videoContainer h3 {
+    border-bottom: gainsboro 2px solid;
+    display: block;
+    border-radius: 10px;
+    color: white;
+}
+
+.presentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto 30px;
+    vertical-align: middle;
+    width: 60%;
+    height: 100%;
+    justify-content: center;
+    overflow: auto;
+    text-align: center;
+}
+
+.presentation p{
+    font-size:medium;
+}
+
+.imgContainer {
+    width: 20%;
+}
+
+.imgContainer img {
+    border: 2px solid gold;
+    overflow: hidden;
+    border-radius: 20px;
+    width: 100%;
 }
