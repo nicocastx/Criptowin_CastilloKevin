@@ -10,9 +10,6 @@ body {
     color: white;
 }
 
-p {
-    font-size: 1.6rem;
-}
 
 h1{
     font-weight: 700;
@@ -26,7 +23,6 @@ h1{
     padding: 15px 32px;
     text-decoration: none;
     cursor: pointer;
-    font-size: 16px;
     border-radius: 45px;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
     ;
@@ -104,9 +100,11 @@ h1{
 
 /* Main de index*/
 
-.carousel .card{
+.card{
     margin: auto;
     color: black;
+    font-size: 1.2rem;
+    text-align: center;
 }
 
 .mainTitleContainer {
@@ -115,6 +113,7 @@ h1{
     color: black;
     text-align: center;
     vertical-align: middle;
+    grid-area: titulo;
     background: linear-gradient(to right, #f7971e, #ffd200);
     border: 2px solid #ffd200;
     box-shadow: 0px 0px 8px #f46b45;
@@ -215,4 +214,207 @@ footer {
     overflow: hidden;
     border-radius: 20px;
     width: 100%;
+}
+
+/* Estilos para servicios */
+
+.companiesContainer {
+    height: 250px;
+    background: linear-gradient(to right, #f46b45, #eea849);
+    color: #000;
+    grid-area: companies;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.companiesContainer .carousel {
+    width: 10%;
+    height:150px;
+}
+
+/* Estilos para grafico */
+.tradingview-widget-container {
+    height: 90%;
+    width: 600px;
+    border: #ffd200 2px solid;
+    padding: 20px;
+}
+
+.tradingview-widget-container div div {
+    height: 380px !important;
+}
+
+/* Estilos para Contacto */
+
+.contactContainer {
+    background-color: #ece9e6;
+    width: 90%;
+    height: 700px;
+    padding: 20px;
+    color: #000;
+    border: #000 1px solid;
+    box-shadow: 0px 0px 10px #000;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: auto;
+}
+
+form {
+    width: 40%;
+}
+
+.contactContainer input[type=submit] {
+    width: 150px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
+
+.contactContainer div {
+    margin: 20px 0;
+}
+
+div input[type=text],
+div input[type=email] {
+    background: transparent;
+    height: 35px;
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid #000;
+}
+
+div input:focus {
+    outline: none;
+}
+
+div input[type=radio] {
+    height: 10px;
+    width: 20px;
+    margin: 5px 0;
+}
+
+.commentaryContainer textarea {
+    background: transparent;
+    width: 100%;
+    height: 120px;
+    margin-top: 10px;
+    font-family: 'Roboto', sans-serif;
+    padding: 5px;
+}
+
+@media screen and (max-width: 1024px) {
+
+    .mygrid {
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: 150px 1fr 1fr 1fr;
+        gap: 20px;
+    }
+
+
+    .gridAboutUs {
+        grid-template-rows: 200px 1.5fr 1.5fr;
+        grid-template-areas: "titulo"
+            "pub1"
+            "pub2";
+    }
+
+    .gridServices {
+        grid-template-rows: 150px 1fr 1fr 1fr 250px;
+        grid-template-areas: "titulo"
+            "pub1"
+            "pub2"
+            "pub3"
+            "companies";
+    }
+
+    .gridGraphic {
+        grid-template-columns: 1fr;
+        grid-template-rows: 150px 2.75fr 2.75fr;
+        grid-template-areas: "titulo"
+            "pub1"
+            "pub2";
+    }
+
+    .gridContact {
+        grid-template-rows: 150px 2.75fr 2.75fr;
+        grid-template-areas: "titulo"
+            "pub1"
+        ;
+    }
+
+
+    /* Queries para el index */
+    .mainContentContainer {
+        height: 2400px;
+        max-width: 768px;
+    }
+
+    .publication {
+        width: 90%;
+    }
+    /* Queries para nosotros */
+    .mycontainer {
+        flex-direction: column;
+    }
+
+
+    .videoContainer {
+        width: 80%;
+        height: 60%;
+    }
+
+    .presentation {
+        width: 100%;
+    }
+
+    .imgContainer {
+        width: 50%;
+    }
+
+    /* Queries para servicios */
+    .titleContainer {
+        border: none;
+    }
+
+    .companiesContainer {
+        height: 150px;
+        width: 90%;
+    }
+
+    .titleContainer {
+        font-size: 1.4rem;
+    }
+
+    .companiesContainer .carousel {
+        width: 20%;
+    }
+
+    /* Queries para grafico */
+
+    .tradingview-widget-container {
+        height: fit-content;
+        width: 100%;
+        border: #ffd200 2px solid;
+        padding: 10px;
+    }
+
+    .tradingview-widget-container div div {
+        height: 600px !important;
+    }
+
+    /* Queries para Contacto */
+    .contactContainer {
+        height: 90%;
+    }
+
+    form {
+        width: 100%;
+    }
+
 }
