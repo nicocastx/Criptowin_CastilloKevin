@@ -1,17 +1,171 @@
 @import "colores.scss";
+@import "grilla.scss";
+@import "estructura.scss";
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+header {
+    max-width: 1800px;
+    margin: 0 auto;
+    height: 60px;
+    border-end-start-radius: 20px;
+    border-end-end-radius: 20px;
+    background: $primary-gradient;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    .logoContainer {
+        width: 200px;
+        height: 100%;
+        margin-left: 20px;
+        display: flex;
+        align-items: center;
+        img{
+            width: 5em;
+        }
+    }
+    nav {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 20px;
+        ul {
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            border: 1px solid #000;
+            padding: 0.5rem;
+            li {
+                margin-left: 2%;
+                width: 8rem;
+                .menuLink {
+                    text-decoration: none;
+                    font-size: 2rem;
+                    color: $negro;
+                    transition: all 0.5s;
+                    &:hover {
+                        color: $blanco;
+                        border-bottom: 2px solid $blanco;
+                    }
+                }
+            }
+        }
+    }
+    
 }
 
-html{
-    font-size: 10px;
+.mainContentContainer {
+    max-width: 1800px;
+    height: 1200px;
+    color: $blanco;
+    margin: 0 auto;
+    .mainTitleContainer {
+        height: 120px;
+        width: 100%;
+        grid-area: titulo;
+        text-align: center;
+        vertical-align: middle;
+        background: $primary-gradient;
+        box-shadow: 0px 0px 8px #f46b45;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .mainTitle {
+            font-size: 4rem;
+            color: $negro;
+        }
+    }
+    .publication {
+        height: 500px;
+        max-width: 400px;
+        min-width: 300px;
+        text-align: center;
+        color: black;
+        background: $secondary-gradient;
+        p{
+            font-size: 2rem;
+        }
+        &:hover{
+            transform: translateY(-15px);
+        }
+    }
 }
 
-body{
-    background-color: $primary-color;
-    font-family: 'Roboto', sans-serif;
+footer {
+    display: flex;
+    max-width: 1800px;
+    height: 60px;
+    background: $primary-gradient;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    margin: 0 auto;
+
+    .socialMediaContainer {
+        display: flex;
+        width: 200px;
+        height: 40px;
+        justify-content: space-evenly;
+        a img:hover {
+            filter: invert(100%);
+        }
+    }
+    .footerText {
+        width: 40%;
+        margin-left: 20px;
+        display: flex;
+        align-items: center;
+    }    
 }
 
+@media screen and (max-width: 1024px) {
+    html{
+        font-size: 8px;
+    }
+    .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 150px 1fr 1fr 1fr;
+        gap: 20px;
+    }
+    .gridIndex {
+        grid-template-areas: "titulo"
+            "pub1"
+            "pub2"
+            "pub3";
+    }
+    header {
+        max-width: 768px;
+        min-width: 320px;
+        height: 100px;
+        flex-direction: column;
+        padding: 10px;
+        justify-content: flex-end;
+        .logoContainer {
+            height: 100%;
+            width: 100%;
+            justify-content: center;
+            img{
+                width: 6em;
+            }
+        }
+        nav {
+            margin: 0;
+            justify-content: center;
+            ul {
+                width: 100%;
+            }
+        }
+    }
+    .mainContentContainer {
+        height: 2300px;
+        max-width: 768px;
+        .publication {
+            width: 90%;
+        }
+    }
+    
+    .footerText {
+        margin-left: 5px;
+    }
+}
