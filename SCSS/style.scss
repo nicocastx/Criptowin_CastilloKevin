@@ -1,13 +1,40 @@
+@import "estructura.scss";
 @import "colores.scss";
 @import "grilla.scss";
-@import "estructura.scss";
+
+@mixin btnStyle($width, $fontSize){
+    width: $width;
+    background-color: rgb(0, 0, 0);
+    border: none;
+    color: rgb(206, 215, 220);
+    padding: 15px 32px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: $fontSize;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    font-weight: 500;
+    transition: all 0.3s;
+    &:hover{
+        box-shadow: 0px 15px 20px rgb(40, 39, 39);
+        transform: translateY(-7px);
+        background-color: #fff;
+        color: #000;
+    }
+}
+
+.flex-vertical-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
 
 header {
     max-width: 1800px;
     margin: 0 auto;
     height: 60px;
-    border-end-start-radius: 20px;
-    border-end-end-radius: 20px;
     background: $primary-gradient;
     display: flex;
     align-items: center;
@@ -22,6 +49,9 @@ header {
         align-items: center;
         img{
             width: 5em;
+            &:hover{
+                filter: invert(100%);
+            }
         }
     }
     nav {
@@ -61,20 +91,14 @@ header {
     color: $blanco;
     margin: 0 auto;
     .mainTitleContainer {
+        @extend .flex-vertical-center;
         height: 120px;
         width: 100%;
         grid-area: titulo;
-        text-align: center;
         vertical-align: middle;
         background: $primary-gradient;
         box-shadow: 0px 0px 8px #f46b45;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        .mainTitle {
-            font-size: 4rem;
-            color: $negro;
-        }
+        color: $negro;
     }
     .publication {
         height: 500px;
@@ -82,12 +106,30 @@ header {
         min-width: 300px;
         text-align: center;
         color: black;
+        transition: all 1s;
         background: $secondary-gradient;
-        p{
-            font-size: 2rem;
-        }
         &:hover{
-            transform: translateY(-15px);
+            transform: translateY(-15px); 
+        }
+    }
+    .desc{
+        @extend .flex-vertical-center;
+        color: black;
+        grid-area: desc;
+        width: 80%;
+        height: 90%;
+        background: $secondary-gradient;
+        text-align:center;
+        p{
+            width: 80%;
+        }
+        .btnContainer{
+            width: 60%;
+            display: flex;
+            justify-content: space-evenly;
+            .btnIndex{
+            @include btnStyle(250px, 2rem);
+            }
         }
     }
 }
@@ -101,14 +143,22 @@ footer {
     align-content: center;
     align-items: center;
     margin: 0 auto;
-
+    .footerText{
+        p{
+            font-size: 1.6rem;
+        }
+    }
     .socialMediaContainer {
         display: flex;
         width: 200px;
         height: 40px;
         justify-content: space-evenly;
-        a img:hover {
-            filter: invert(100%);
+        a {
+                @each $red, $color in $listaRedSocial{
+                    .icon-#{$red}:hover{
+                        filter: $color;
+                    }
+            }
         }
     }
     .footerText {
@@ -123,17 +173,20 @@ footer {
     html{
         font-size: 8px;
     }
+
     .grid {
         grid-template-columns: 1fr;
-        grid-template-rows: 150px 1fr 1fr 1fr;
-        gap: 20px;
+        grid-template-rows: 150px 1fr 1fr 1fr 1.5fr;
     }
+
     .gridIndex {
         grid-template-areas: "titulo"
             "pub1"
             "pub2"
-            "pub3";
+            "pub3"
+            "desc";
     }
+
     header {
         max-width: 768px;
         min-width: 320px;
@@ -141,6 +194,7 @@ footer {
         flex-direction: column;
         padding: 10px;
         justify-content: flex-end;
+
         .logoContainer {
             height: 100%;
             width: 100%;
@@ -149,6 +203,7 @@ footer {
                 width: 6em;
             }
         }
+
         nav {
             margin: 0;
             justify-content: center;
@@ -157,14 +212,23 @@ footer {
             }
         }
     }
+
     .mainContentContainer {
         height: 2300px;
         max-width: 768px;
         .publication {
             width: 90%;
         }
+        .desc{
+            .btnContainer{
+                width: 100%;
+                height: 40%;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
     }
-    
+
     .footerText {
         margin-left: 5px;
     }
