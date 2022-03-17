@@ -1,0 +1,30 @@
+.publication {
+    @extend .cardStyle;
+    height: 500px;
+    max-width: 400px;
+    min-width: 300px;
+}
+
+.desc {
+    @extend .flex-vertical-center;
+    color: black;
+    grid-area: desc;
+    width: 80%;
+    height: 90%;
+    background: $secondary-gradient;
+    text-align: center;
+
+    p {
+        width: 80%;
+    }
+
+    .btnContainer {
+        width: 60%;
+        display: flex;
+        justify-content: space-evenly;
+
+        .btnIndex {
+            @include btnStyle(250px, 2rem);
+        }
+    }
+}

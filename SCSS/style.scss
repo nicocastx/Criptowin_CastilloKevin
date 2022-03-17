@@ -1,95 +1,18 @@
 @import "estructura.scss";
 @import "colores.scss";
 @import "grilla.scss";
-
-@mixin btnStyle($width, $fontSize){
-    width: $width;
-    background-color: rgb(0, 0, 0);
-    border: none;
-    color: rgb(206, 215, 220);
-    padding: 15px 32px;
-    text-decoration: none;
-    cursor: pointer;
-    font-size: $fontSize;
-    border-radius: 45px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    font-weight: 500;
-    transition: all 0.3s;
-    &:hover{
-        box-shadow: 0px 15px 20px rgb(40, 39, 39);
-        transform: translateY(-7px);
-        background-color: #fff;
-        color: #000;
-    }
-}
-
-.flex-vertical-center{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    text-align: center;
-}
-
-header {
-    max-width: 1800px;
-    margin: 0 auto;
-    height: 60px;
-    background: $primary-gradient;
-    display: flex;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    .logoContainer {
-        width: 200px;
-        height: 100%;
-        margin-left: 20px;
-        display: flex;
-        align-items: center;
-        img{
-            width: 5em;
-            &:hover{
-                filter: invert(100%);
-            }
-        }
-    }
-    nav {
-        width: 100%;
-        display: flex;
-        justify-content: flex-end;
-        margin-right: 20px;
-        ul {
-            list-style-type: none;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            border: 1px solid #000;
-            padding: 0.5rem;
-            li {
-                margin-left: 2%;
-                width: 8rem;
-                .menuLink {
-                    text-decoration: none;
-                    font-size: 2rem;
-                    color: $negro;
-                    transition: all 0.5s;
-                    &:hover {
-                        color: $blanco;
-                        border-bottom: 2px solid $blanco;
-                    }
-                }
-            }
-        }
-    }
-    
-}
+@import "mixin.scss";
+@import "extend.scss";
+@import "header.scss";
+@import "footer.scss";
 
 .mainContentContainer {
     max-width: 1800px;
     height: 1200px;
     color: $blanco;
     margin: 0 auto;
+
+    //Titulo de las paginas
     .mainTitleContainer {
         @extend .flex-vertical-center;
         height: 120px;
@@ -100,92 +23,30 @@ header {
         box-shadow: 0px 0px 8px #f46b45;
         color: $negro;
     }
-    .publication {
-        height: 500px;
-        max-width: 400px;
-        min-width: 300px;
-        text-align: center;
-        color: black;
-        transition: all 1s;
-        background: $secondary-gradient;
-        &:hover{
-            transform: translateY(-15px); 
-        }
-    }
-    .desc{
-        @extend .flex-vertical-center;
-        color: black;
-        grid-area: desc;
-        width: 80%;
-        height: 90%;
-        background: $secondary-gradient;
-        text-align:center;
-        p{
-            width: 80%;
-        }
-        .btnContainer{
-            width: 60%;
-            display: flex;
-            justify-content: space-evenly;
-            .btnIndex{
-            @include btnStyle(250px, 2rem);
-            }
-        }
-    }
-}
 
-footer {
-    display: flex;
-    max-width: 1800px;
-    height: 60px;
-    background: $primary-gradient;
-    justify-content: space-between;
-    align-content: center;
-    align-items: center;
-    margin: 0 auto;
-    .footerText{
-        p{
-            font-size: 1.6rem;
-        }
-    }
-    .socialMediaContainer {
-        display: flex;
-        width: 200px;
-        height: 40px;
-        justify-content: space-evenly;
-        a {
-                @each $red, $color in $listaRedSocial{
-                    .icon-#{$red}:hover{
-                        filter: $color;
-                    }
-            }
-        }
-    }
-    .footerText {
-        width: 40%;
-        margin-left: 20px;
-        display: flex;
-        align-items: center;
-    }    
+    //Estilos de Index
+    @import "index.scss";
+
+
+    //Estilos de Nosotros
+    @import "nosotros.scss";
+
+
+    //Estilos de servicios
+    @import "servicios.scss";
+
+    //Estilos para Grafico
+    @import "grafico.scss";
+
+    //Estilos para Contacto
+    @import "contacto.scss";
 }
 
 @media screen and (max-width: 1024px) {
-    html{
+    html {
         font-size: 8px;
     }
-
-    .grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: 150px 1fr 1fr 1fr 1.5fr;
-    }
-
-    .gridIndex {
-        grid-template-areas: "titulo"
-            "pub1"
-            "pub2"
-            "pub3"
-            "desc";
-    }
+    @import "grillaMobile.scss";
 
     header {
         max-width: 768px;
@@ -199,7 +60,8 @@ footer {
             height: 100%;
             width: 100%;
             justify-content: center;
-            img{
+
+            img {
                 width: 6em;
             }
         }
@@ -207,8 +69,9 @@ footer {
         nav {
             margin: 0;
             justify-content: center;
+
             ul {
-                width: 100%;
+                width: 105%;
             }
         }
     }
@@ -216,20 +79,80 @@ footer {
     .mainContentContainer {
         height: 2300px;
         max-width: 768px;
+
+        //Queries para Index
         .publication {
             width: 90%;
         }
-        .desc{
-            .btnContainer{
+
+        .desc {
+            .btnContainer {
                 width: 100%;
                 height: 40%;
                 flex-direction: column;
                 align-items: center;
             }
         }
-    }
 
-    .footerText {
-        margin-left: 5px;
+        //Queries para Nosotros
+        .myContainer {
+            flex-direction: column;
+
+            .videoContainer {
+                width: 80%;
+                height: 60%;
+            }
+
+            .presentation {
+                width: 100%;
+
+                p {
+                    font-size: 2rem;
+                }
+            }
+
+            .imgContainer {
+                width: 40%;
+            }
+        }
+
+    //Queries para Servicios
+        .companiesContainer{
+            height: 200px;
+            width: 98%;
+            .titleContainer{
+                border: none;
+            }
+            .imgContainer{
+                margin: auto 0;
+            }
+        }
+    
+    //Queries para grafico
+    .tradingview-widget-container{
+        height: fit-content;
+        width: 90%;
+        padding: 10px;
+        div{
+            div{
+                height: 600px !important;
+            }
+        }
+    }
+    //Queries para Contacto
+    .contactContainer{
+        width: 90%;
+    }
+    .mapContainer{
+        width: 90%;
+        height: 80%;
+    }
+}
+    
+    //Queries para footer
+    footer {
+        .footerText {
+            margin-left: 5px;
+        }
     }
 }

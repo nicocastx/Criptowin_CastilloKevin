@@ -14,10 +14,10 @@ img {
   width: 100%; }
 
 h1 {
-  font-size: 5.5rem; }
+  font-size: 4.5rem; }
 
 h2 {
-  font-size: 4rem; }
+  font-size: 3.5rem; }
 
 h3 {
   font-size: 3rem; }
@@ -30,7 +30,7 @@ p {
   justify-items: center;
   align-items: center;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr 3fr 2fr;
+  grid-template-rows: 200px 3fr 2fr;
   gap: 20px; }
 
 .gridi1 {
@@ -45,12 +45,51 @@ p {
 .gridIndex {
   grid-template-areas: "titulo titulo titulo" "pub1 pub2 pub3" "desc desc desc"; }
 
-.flex-vertical-center, .mainContentContainer .mainTitleContainer, .mainContentContainer .desc {
+.gridAboutUs {
+  grid-template-columns: 1fr;
+  grid-template-areas: "titulo" "pub1" "pub2"; }
+
+.gridServices {
+  grid-template-areas: "titulo titulo titulo" "pub1 pub2 pub3" "companies companies companies"; }
+
+.gridGraphic {
+  grid-template-columns: 1fr;
+  grid-template-rows: 200px 2.5fr 2.5fr;
+  grid-template-areas: "titulo" "pub1" "pub2"; }
+
+.gridContact {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 200px 1fr;
+  grid-template-areas: "titulo titulo" "pub1 pub2"; }
+
+.flex-vertical-center, .mainContentContainer .mainTitleContainer, .mainContentContainer .desc, .mainContentContainer .companiesContainer {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   text-align: center; }
+
+.flex-vertical-center-middle, .mainContentContainer .myContainer .presentation, .mainContentContainer .mapContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
+
+.cardStyle, .mainContentContainer .publication, .mainContentContainer .serviceContainer {
+  text-align: center;
+  background: linear-gradient(to right, #ece9e6, #ffffff);
+  transition: all 1s;
+  color: black; }
+  .cardStyle:hover, .mainContentContainer .publication:hover, .mainContentContainer .serviceContainer:hover {
+    transform: translateY(-15px); }
+
+.submitStyle, .mainContentContainer .contactContainer form .formSubmit input[type=text], .mainContentContainer .contactContainer form .formSubmit input[type=email] {
+  background: transparent;
+  height: 35px;
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid black; }
 
 header {
   max-width: 1800px;
@@ -96,6 +135,36 @@ header {
             color: white;
             border-bottom: 2px solid white; }
 
+footer {
+  display: flex;
+  max-width: 1800px;
+  height: 60px;
+  background: linear-gradient(to right, #f7971e, #ffd200);
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  margin: 0 auto; }
+  footer .footerText p {
+    font-size: 1.6rem; }
+  footer .socialMediaContainer {
+    display: flex;
+    width: 200px;
+    height: 40px;
+    justify-content: space-evenly; }
+    footer .socialMediaContainer a .icon-facebook:hover {
+      filter: invert(31%) sepia(97%) saturate(404%) hue-rotate(182deg) brightness(102%) contrast(88%); }
+    footer .socialMediaContainer a .icon-instagram:hover {
+      filter: invert(25%) sepia(58%) saturate(2896%) hue-rotate(262deg) brightness(83%) contrast(84%); }
+    footer .socialMediaContainer a .icon-twitter:hover {
+      filter: invert(48%) sepia(73%) saturate(1498%) hue-rotate(176deg) brightness(99%) contrast(92%); }
+    footer .socialMediaContainer a .icon-github:hover {
+      filter: invert(100%); }
+  footer .footerText {
+    width: 40%;
+    margin-left: 20px;
+    display: flex;
+    align-items: center; }
+
 .mainContentContainer {
   max-width: 1800px;
   height: 1200px;
@@ -112,13 +181,7 @@ header {
   .mainContentContainer .publication {
     height: 500px;
     max-width: 400px;
-    min-width: 300px;
-    text-align: center;
-    color: black;
-    transition: all 1s;
-    background: linear-gradient(to right, #ece9e6, #ffffff); }
-    .mainContentContainer .publication:hover {
-      transform: translateY(-15px); }
+    min-width: 300px; }
   .mainContentContainer .desc {
     color: black;
     grid-area: desc;
@@ -150,36 +213,148 @@ header {
           transform: translateY(-7px);
           background-color: #fff;
           color: #000; }
-
-footer {
-  display: flex;
-  max-width: 1800px;
-  height: 60px;
-  background: linear-gradient(to right, #f7971e, #ffd200);
-  justify-content: space-between;
-  align-content: center;
-  align-items: center;
-  margin: 0 auto; }
-  footer .footerText p {
-    font-size: 1.6rem; }
-  footer .socialMediaContainer {
+  .mainContentContainer .myContainer {
     display: flex;
-    width: 200px;
-    height: 40px;
-    justify-content: space-evenly; }
-    footer .socialMediaContainer a .icon-facebook:hover {
-      filter: invert(31%) sepia(97%) saturate(404%) hue-rotate(182deg) brightness(102%) contrast(88%); }
-    footer .socialMediaContainer a .icon-instagram:hover {
-      filter: invert(25%) sepia(58%) saturate(2896%) hue-rotate(262deg) brightness(83%) contrast(84%); }
-    footer .socialMediaContainer a .icon-twitter:hover {
-      filter: invert(48%) sepia(73%) saturate(1498%) hue-rotate(176deg) brightness(99%) contrast(92%); }
-    footer .socialMediaContainer a .icon-github:hover {
-      filter: invert(100%); }
-  footer .footerText {
-    width: 40%;
-    margin-left: 20px;
+    flex-direction: row;
+    padding: 20px;
+    width: 80%;
+    height: 80%;
+    align-items: center;
+    border: 1px solid #ffd200;
+    box-shadow: 0px 0px 5px #ffd200; }
+    .mainContentContainer .myContainer .videoContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      text-align: center;
+      padding: 20px;
+      height: 90%;
+      width: 40%;
+      position: relative; }
+      .mainContentContainer .myContainer .videoContainer h3 {
+        border-bottom: gainsboro 2px solid;
+        display: block;
+        color: white; }
+      .mainContentContainer .myContainer .videoContainer iframe {
+        width: 100%;
+        height: 80%;
+        border: #ece9e6 2px solid; }
+    .mainContentContainer .myContainer .presentation {
+      margin: auto 30px;
+      vertical-align: middle;
+      overflow: auto;
+      width: 60%;
+      height: 100%; }
+    .mainContentContainer .myContainer .imgContainer {
+      width: 20%; }
+      .mainContentContainer .myContainer .imgContainer img {
+        border: 2px solid gold;
+        overflow: hidden;
+        border-radius: 20px; }
+  .mainContentContainer .serviceContainer {
+    height: 600px;
+    min-width: 320px;
+    max-width: 400px;
+    position: relative;
+    margin: 0 auto; }
+    .mainContentContainer .serviceContainer .btnServices {
+      width: 200px;
+      background-color: black;
+      border: none;
+      color: #ced7dc;
+      padding: 15px 32px;
+      text-decoration: none;
+      cursor: pointer;
+      font-size: 1.6rem;
+      border-radius: 45px;
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+      font-weight: 500;
+      transition: all 0.3s;
+      position: absolute;
+      bottom: 20px;
+      right: 20px; }
+      .mainContentContainer .serviceContainer .btnServices:hover {
+        box-shadow: 0px 15px 20px #282727;
+        transform: translateY(-7px);
+        background-color: #fff;
+        color: #000; }
+  .mainContentContainer .companiesContainer {
+    grid-area: companies;
+    width: 60%;
+    max-width: 1800px;
+    height: 250px;
+    background: linear-gradient(to right, #f7971e, #ffd200);
+    color: black; }
+    .mainContentContainer .companiesContainer .titleContainer {
+      border: black 2px solid;
+      padding: 1%; }
+    .mainContentContainer .companiesContainer .companies {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 150px; }
+  .mainContentContainer .tradingview-widget-container {
+    height: 90%;
+    width: 600px;
+    border: #ffd200 2px solid;
+    padding: 20px; }
+    .mainContentContainer .tradingview-widget-container div div {
+      height: 380px !important; }
+  .mainContentContainer .contactContainer {
+    background-color: #e3e9ed;
+    width: 80%;
+    height: 700px;
+    font-size: 2rem;
+    color: black;
+    border: black 1px solid;
+    box-shadow: 0px 0px 10px black;
+    position: relative;
+    overflow: auto;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center; }
+    .mainContentContainer .contactContainer form {
+      width: 80%; }
+      .mainContentContainer .contactContainer form .formSubmit {
+        margin: 20px 0; }
+        .mainContentContainer .contactContainer form .formSubmit input:focus {
+          outline: none; }
+        .mainContentContainer .contactContainer form .formSubmit input[type=radio] {
+          height: 10px;
+          width: 20px;
+          margin: 5px 0; }
+        .mainContentContainer .contactContainer form .formSubmit textarea {
+          background: transparent;
+          width: 100%;
+          height: 120px;
+          margin-top: 10px;
+          font-family: 'Roboto', sans-serif;
+          padding: 5px; }
+    .mainContentContainer .contactContainer input[type=submit] {
+      width: 100%;
+      background-color: black;
+      border: none;
+      color: #ced7dc;
+      padding: 15px 32px;
+      text-decoration: none;
+      cursor: pointer;
+      font-size: 2rem;
+      border-radius: 45px;
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+      font-weight: 500;
+      transition: all 0.3s; }
+      .mainContentContainer .contactContainer input[type=submit]:hover {
+        box-shadow: 0px 15px 20px #282727;
+        transform: translateY(-7px);
+        background-color: #fff;
+        color: #000; }
+  .mainContentContainer .mapContainer {
+    width: 90%; }
+    .mainContentContainer .mapContainer div {
+      margin-top: 20px;
+      padding: 2%;
+      border: white 2px solid; }
 
 @media screen and (max-width: 1024px) {
   html {
@@ -189,6 +364,19 @@ footer {
     grid-template-rows: 150px 1fr 1fr 1fr 1.5fr; }
   .gridIndex {
     grid-template-areas: "titulo" "pub1" "pub2" "pub3" "desc"; }
+  .gridAboutUs {
+    grid-template-rows: 150px 1.5fr 1.5fr;
+    grid-template-areas: "titulo" "pub1" "pub2"; }
+  .gridServices {
+    grid-template-rows: 150px 1fr 1fr 1fr 250px;
+    grid-template-areas: "titulo" "pub1" "pub2" "pub3" "companies"; }
+  .gridGraphic {
+    grid-template-columns: 1fr;
+    grid-template-rows: 150px 2.75fr 2.75fr;
+    grid-template-areas: "titulo" "pub1" "pub2"; }
+  .gridContact {
+    grid-template-rows: 150px repeat(2, 1fr);
+    grid-template-areas: "titulo" "pub1"; }
   header {
     max-width: 768px;
     min-width: 320px;
@@ -206,7 +394,7 @@ footer {
       margin: 0;
       justify-content: center; }
       header nav ul {
-        width: 100%; }
+        width: 105%; }
   .mainContentContainer {
     height: 2300px;
     max-width: 768px; }
@@ -217,5 +405,34 @@ footer {
       height: 40%;
       flex-direction: column;
       align-items: center; }
-  .footerText {
+    .mainContentContainer .myContainer {
+      flex-direction: column; }
+      .mainContentContainer .myContainer .videoContainer {
+        width: 80%;
+        height: 60%; }
+      .mainContentContainer .myContainer .presentation {
+        width: 100%; }
+        .mainContentContainer .myContainer .presentation p {
+          font-size: 2rem; }
+      .mainContentContainer .myContainer .imgContainer {
+        width: 40%; }
+    .mainContentContainer .companiesContainer {
+      height: 200px;
+      width: 98%; }
+      .mainContentContainer .companiesContainer .titleContainer {
+        border: none; }
+      .mainContentContainer .companiesContainer .imgContainer {
+        margin: auto 0; }
+    .mainContentContainer .tradingview-widget-container {
+      height: fit-content;
+      width: 90%;
+      padding: 10px; }
+      .mainContentContainer .tradingview-widget-container div div {
+        height: 600px !important; }
+    .mainContentContainer .contactContainer {
+      width: 90%; }
+    .mainContentContainer .mapContainer {
+      width: 90%;
+      height: 80%; }
+  footer .footerText {
     margin-left: 5px; } }

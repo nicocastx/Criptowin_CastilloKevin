@@ -1,0 +1,35 @@
+@import "colores.scss";
+
+.flex-vertical-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+.flex-vertical-center-middle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.cardStyle{
+    text-align: center;
+    background: $secondary-gradient;
+    transition: all 1s;
+    color: black;
+    &:hover{
+        transform: translateY(-15px);
+    }
+}
+
+.submitStyle{
+    background: transparent;
+    height: 35px;
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid $negro;
+}

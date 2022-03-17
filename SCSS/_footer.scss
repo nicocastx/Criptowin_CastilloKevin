@@ -1,0 +1,34 @@
+footer {
+    display: flex;
+    max-width: 1800px;
+    height: 60px;
+    background: $primary-gradient;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    margin: 0 auto;
+    .footerText{
+        p{
+            font-size: 1.6rem;
+        }
+    }
+    .socialMediaContainer {
+        display: flex;
+        width: 200px;
+        height: 40px;
+        justify-content: space-evenly;
+        a {
+                @each $red, $color in $listaRedSocial{
+                    .icon-#{$red}:hover{
+                        filter: $color;
+                    }
+            }
+        }
+    }
+    .footerText {
+        width: 40%;
+        margin-left: 20px;
+        display: flex;
+        align-items: center;
+    }    
+}
