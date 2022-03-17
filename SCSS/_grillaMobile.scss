@@ -1,0 +1,42 @@
+.grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 150px 1fr 1fr 1fr 1.5fr;
+}
+
+.gridIndex {
+    grid-template-areas: "titulo"
+        "pub1"
+        "pub2"
+        "pub3"
+        "desc";
+}
+
+.gridAboutUs {
+    grid-template-rows: 150px 1.5fr 1.5fr;
+    grid-template-areas: "titulo"
+        "pub1"
+        "pub2";
+}
+
+.gridServices {
+    grid-template-rows: 150px 1fr 1fr 1fr 250px;
+    grid-template-areas: "titulo"
+        "pub1"
+        "pub2"
+        "pub3"
+        "companies";
+}
+
+.gridGraphic {
+    grid-template-columns: 1fr;
+    grid-template-rows: 150px 2.75fr 2.75fr;
+    grid-template-areas: "titulo"
+        "pub1"
+        "pub2";
+}
+
+.gridContact {
+    grid-template-rows: 150px repeat(2, 1fr);
+    grid-template-areas: "titulo"
+        "pub1";
+}

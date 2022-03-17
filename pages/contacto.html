@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../img/favicon.png" />
     <link rel="stylesheet" href="../css/general.css">
-    <meta name="description" content="Formulario de Contacto para el Servicio de Tutorias y Analisis de Criptomonedas y Blockchain tanto para Empresas como para Individuos">
+    <meta name="description"
+        content="Formulario de Contacto para el Servicio de Tutorias y Analisis de Criptomonedas y Blockchain tanto para Empresas como para Individuos">
     <meta name="keywords" content="CRIPTO, CRIPTOMONEDAS, TUTORIA, ANALISIS, BLOCKCHAIN, EMPRESAS">
 
     <!-- fuente roboto sans serif -->
@@ -45,15 +46,15 @@
             <div class="contactContainer gridi1">
                 <form action="#">
                     <h3>Porfavor, registra aqui tus datos</h3>
-                    <div class="namesContainer">
+                    <div class="formSubmit">
                         <label for="nombre-apellido">Ingresa tu nombre y apellido</label>
                         <input type="text" name="nombre-apellido" placeholder="Nombre y Apellido..." required>
                     </div>
-                    <div class="emailContainer">
+                    <div class="formSubmit">
                         <label for="mail">Ingresa tu email asi nos mantenemos en contacto:</label>
                         <input type="email" name="mail" id="mail" placeholder="Email...">
                     </div>
-                    <div class="sexContainer">
+                    <div class="formSubmit">
                         <p>Sexo:</p>
                         <input type="radio" name="sexo" id="hombre" value="Hombre" required>
                         <label for="hombre">Hombre</label><br>
@@ -62,7 +63,7 @@
                         <input type="radio" name="sexo" id="otro" value="Otro" required>
                         <label for="otro">Otro</label>
                     </div>
-                    <div class="commentaryContainer">
+                    <div class="formSubmit">
                         <label for="comentario">Dejanos aqui cualquier comentario que quieras:</label>
                         <textarea name="comentario" id="comentario" cols="30" rows="10"
                             placeholder="Tus comentarios aqui..."></textarea>
@@ -70,19 +71,27 @@
                     <input class="btn" type="submit" value="Enviar">
                 </form>
             </div>
+            <div class="mapContainer">
+                <h2>Donde Podes encontrarnos:</h2>
+                <div style="width: 100%"><iframe width="100%" height="600" frameborder="0" scrolling="no"
+                        marginheight="0" marginwidth="0"
+                        src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q=Av.%20Alicia%20Moreau%20de%20Justo%20740,%20C1107AAT%20CABA+(Oficinas%20Criptowin)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a
+                            href="https://www.gps.ie/car-satnav-gps/">Car GPS</a></iframe></div>
+            </div>
         </section>
     </main>
     <footer>
         <div class="footerText">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
+
         <div class="socialMediaContainer">
-            <a href=""><img src="../img/facebook.png" alt="facebook icon" height="40px"></a>
-            <a href=""><img src="../img/instagram.png" alt="instagram icon" height="40px"></a>
-            <a href=""><img src="../img/twitter.png" alt="twitter icon" height="40px"></a>
+            <a href=""><img src="../img/facebook.png" class="icon-facebook" alt="facebook icon" height="40px"></a>
+            <a href=""><img src="../img/instagram.png" alt="instagram icon" class="icon-instagram" height="40px"></a>
+            <a href=""><img src="../img/twitter.png" alt="twitter icon" class="icon-twitter" height="40px"></a>
             <!-- solo funcionara este -->
-            <a href="https://github.com/nicocastx" target="_blank"><img src="../img/github_icon.png" alt="github icon"
-                    height="40px"></a>
+            <a href="https://github.com/nicocastx" target="_blank"><img src="../img/github_icon.png" class="icon-github"
+                    alt="github icon" height="40px"></a>
         </div>
     </footer>
 </body>

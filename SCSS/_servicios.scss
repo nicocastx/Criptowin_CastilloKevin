@@ -1,0 +1,37 @@
+.serviceContainer {
+    @extend .cardStyle;
+    height: 600px;
+    min-width: 320px;
+    max-width: 400px;
+    position: relative;
+    margin: 0 auto;
+
+    .btnServices {
+        @include btnStyle(200px, 1.6rem);
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+.companiesContainer {
+    @extend .flex-vertical-center;
+    grid-area: companies;
+    width: 60%;
+    max-width: 1800px;
+    height: 250px;
+    background: $primary-gradient;
+    color: $negro;
+
+    .titleContainer {
+        border: $negro 2px solid;
+        padding: 1%;
+    }
+
+    .companies {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 150px;
+    }
+}
