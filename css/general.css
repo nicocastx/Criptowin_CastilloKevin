@@ -151,14 +151,16 @@ footer {
     width: 200px;
     height: 40px;
     justify-content: space-evenly; }
-    footer .socialMediaContainer a .icon-facebook:hover {
-      filter: invert(31%) sepia(97%) saturate(404%) hue-rotate(182deg) brightness(102%) contrast(88%); }
-    footer .socialMediaContainer a .icon-instagram:hover {
-      filter: invert(25%) sepia(58%) saturate(2896%) hue-rotate(262deg) brightness(83%) contrast(84%); }
-    footer .socialMediaContainer a .icon-twitter:hover {
-      filter: invert(48%) sepia(73%) saturate(1498%) hue-rotate(176deg) brightness(99%) contrast(92%); }
-    footer .socialMediaContainer a .icon-github:hover {
-      filter: invert(100%); }
+    footer .socialMediaContainer a {
+      width: 40px; }
+      footer .socialMediaContainer a .icon-facebook:hover {
+        filter: invert(31%) sepia(97%) saturate(404%) hue-rotate(182deg) brightness(102%) contrast(88%); }
+      footer .socialMediaContainer a .icon-instagram:hover {
+        filter: invert(25%) sepia(58%) saturate(2896%) hue-rotate(262deg) brightness(83%) contrast(84%); }
+      footer .socialMediaContainer a .icon-twitter:hover {
+        filter: invert(48%) sepia(73%) saturate(1498%) hue-rotate(176deg) brightness(99%) contrast(92%); }
+      footer .socialMediaContainer a .icon-github:hover {
+        filter: invert(100%); }
   footer .footerText {
     width: 40%;
     margin-left: 20px;
