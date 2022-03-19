@@ -203,10 +203,10 @@ footer {
         border: none;
         color: #ced7dc;
         padding: 15px 32px;
+        border-radius: 20px;
         text-decoration: none;
         cursor: pointer;
         font-size: 2rem;
-        border-radius: 45px;
         box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
         font-weight: 500;
         transition: all 0.3s; }
@@ -240,7 +240,8 @@ footer {
       .mainContentContainer .myContainer .videoContainer iframe {
         width: 100%;
         height: 80%;
-        border: #ece9e6 2px solid; }
+        border: #ece9e6 2px solid;
+        box-shadow: 0px 0px 2px white; }
     .mainContentContainer .myContainer .presentation {
       margin: auto 30px;
       vertical-align: middle;
@@ -265,10 +266,10 @@ footer {
       border: none;
       color: #ced7dc;
       padding: 15px 32px;
+      border-radius: 20px;
       text-decoration: none;
       cursor: pointer;
       font-size: 1.6rem;
-      border-radius: 45px;
       box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
       font-weight: 500;
       transition: all 0.3s;
@@ -294,7 +295,10 @@ footer {
       display: flex;
       justify-content: space-around;
       align-items: center;
-      height: 150px; }
+      height: 150px;
+      width: 95%; }
+      .mainContentContainer .companiesContainer .companies .galleryCell {
+        max-width: 150px; }
   .mainContentContainer .tradingview-widget-container {
     height: 90%;
     width: 600px;
@@ -339,10 +343,10 @@ footer {
       border: none;
       color: #ced7dc;
       padding: 15px 32px;
+      border-radius: 20px;
       text-decoration: none;
       cursor: pointer;
       font-size: 2rem;
-      border-radius: 45px;
       box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
       font-weight: 500;
       transition: all 0.3s; }
