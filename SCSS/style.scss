@@ -1,3 +1,4 @@
+// Modulos para el estilo principal del sitio web
 @import "estructura.scss";
 @import "colores.scss";
 @import "grilla.scss";
@@ -6,6 +7,7 @@
 @import "header.scss";
 @import "footer.scss";
 
+// Contenedor de estilos principal
 .mainContentContainer {
     max-width: 1800px;
     height: 1200px;
@@ -42,12 +44,14 @@
     @import "contacto.scss";
 }
 
+// Media queries del sitio web
 @media screen and (max-width: 1024px) {
+    // Queries generales
     html {
         font-size: 8px;
     }
     @import "grillaMobile.scss";
-
+// Queries del header
     header {
         max-width: 768px;
         min-width: 320px;
@@ -79,7 +83,7 @@
     .mainContentContainer {
         height: 2300px;
         max-width: 768px;
-
+        
         //Queries para Index
         .publication {
             width: 90%;

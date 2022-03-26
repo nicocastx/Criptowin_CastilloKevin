@@ -1,3 +1,4 @@
+// Contenedor de la descripcion del equipo
 .myContainer {
     display: flex;
     flex-direction: row;
@@ -31,7 +32,7 @@
             box-shadow: 0px 0px 2px $blanco;
         }
     }
-
+// Contenedor de la descripcion del servicio
     .presentation {
         @extend .flex-vertical-center-middle;
         margin: auto 30px;

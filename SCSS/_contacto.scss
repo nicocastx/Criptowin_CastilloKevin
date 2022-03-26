@@ -1,5 +1,7 @@
+// Estilos para pagina de contacto
 @import "mixin.scss";
 
+// Contenedor de formulario de contacto
 .contactContainer {
     background-color: $gris;
     width: 80%;
@@ -14,7 +16,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    // Formulario
     form {
         width: 80%;
 
@@ -56,7 +58,7 @@
         @include btnStyle(100%, 2rem);
     }
 }
-
+// Estilos del mapa
 .mapContainer{
     @extend .flex-vertical-center-middle;
     width: 90%;

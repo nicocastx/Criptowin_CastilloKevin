@@ -149,10 +149,12 @@ footer {
   footer .socialMediaContainer {
     display: flex;
     width: 200px;
-    height: 40px;
+    height: 30px;
     justify-content: space-evenly; }
     footer .socialMediaContainer a {
-      width: 40px; }
+      width: 30px; }
+      footer .socialMediaContainer a img {
+        height: 30px; }
       footer .socialMediaContainer a .icon-facebook:hover {
         filter: invert(31%) sepia(97%) saturate(404%) hue-rotate(182deg) brightness(102%) contrast(88%); }
       footer .socialMediaContainer a .icon-instagram:hover {

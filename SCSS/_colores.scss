@@ -1,10 +1,13 @@
+// Paleta de colores
 $primary-color: rgb(27, 29, 30);
 $negro: rgb(0, 0, 0);
 $gris: rgb(227, 233, 237);
 $blanco: rgb(255, 255, 255);
 $amarillo: #ffd200;
+// Gradientes
 $primary-gradient: linear-gradient(to right, #f7971e, #ffd200); 
 $secondary-gradient: linear-gradient(to right, #ece9e6, #ffffff);
+// Lista de filtro para colores de redes sociales
 $listaRedSocial: (facebook: invert(31%) sepia(97%) saturate(404%) hue-rotate(182deg) brightness(102%) contrast(88%),
 instagram: invert(25%) sepia(58%) saturate(2896%) hue-rotate(262deg) brightness(83%) contrast(84%), 
 twitter: invert(48%) sepia(73%) saturate(1498%) hue-rotate(176deg) brightness(99%) contrast(92%), 
